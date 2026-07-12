@@ -8,7 +8,7 @@
   "email": "",
   "website": "https://rileys-hvac.com/",
   "address": "",
-  "primaryCta": "",
+  "primaryCta": "Call now",
   "secondaryCta": "",
   "headline": "",
   "subheadline": "",
@@ -21,6 +21,9 @@
   "offer": "",
   "guarantee": "",
   "brandTone": "",
+  "logo": "",
+  "brandColors": [],
+  "allowStockAssets": false,
   "heroImage": null,
   "photos": [],
   "rawLead": {
