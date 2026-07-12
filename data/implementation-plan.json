@@ -1,0 +1,319 @@
+{
+  "designRead": {
+    "business": "Riley's A/C and Heat",
+    "market": "Manhattan",
+    "businessType": "General Contractor with HVAC positioning in supplied notes",
+    "availableFacts": [
+      "Phone: (929) 298-9750",
+      "Website: https://rileys-hvac.com/",
+      "Service area: manhattan",
+      "Notes mention hvac",
+      "Notes mention 4.9 rating",
+      "Notes mention 42 Google reviews",
+      "Notes mention 817 Broadway, New York, NY 10003, USA"
+    ],
+    "missingInputs": [
+      "No logo",
+      "No photos",
+      "No email",
+      "No explicit services array",
+      "No FAQs",
+      "No testimonials",
+      "No brand colors"
+    ],
+    "artDirection": "neighbourhood-thermal-field-guide",
+    "concept": "A refined Manhattan HVAC field guide using editorial typography, thermal-line CSS art, local proof, and phone-first conversion instead of stock imagery.",
+    "hardConstraints": [
+      "Do not edit app/page.tsx or app/globals.css during planning mode.",
+      "Do not invent licenses, guarantees, warranties, emergency service, same-day service, years in business, services not supported by HVAC context, or fake reviews.",
+      "Do not use unrelated stock images or hotlinked assets.",
+      "Preserve static Next.js and Vercel-friendly implementation."
+    ]
+  },
+  "dials": {
+    "DESIGN_VARIANCE": 8,
+    "MOTION_INTENSITY": 3,
+    "VISUAL_DENSITY": 5,
+    "rationale": "High visual specificity is needed because there are no photos or brand assets; motion stays restrained for a trust-first local service page."
+  },
+  "colourScheme": {
+    "paper": "#f5f1eb",
+    "paperWarm": "#efe5d7",
+    "ink": "#15110d",
+    "charcoal": "#26211c",
+    "muted": "#6f655b",
+    "line": "#d7c9b8",
+    "surface": "rgba(255,255,255,0.76)",
+    "white": "#ffffff",
+    "copper": "#9b5f2b",
+    "copperDark": "#5b3318",
+    "cool": "#2f6f86",
+    "coolSoft": "#d8edf0",
+    "heatSoft": "#f0c98d",
+    "usage": "Warm editorial base with graphite contrast, copper CTAs, and cool blue HVAC accents. Avoid one-hue beige dominance and avoid SaaS gradients."
+  },
+  "typography": {
+    "display": "Fraunces",
+    "body": "Instrument Sans",
+    "heroScale": "clamp(3.6rem, 8vw, 8.4rem)",
+    "sectionScale": "clamp(2.1rem, 4.5vw, 5rem)",
+    "bodyScale": "clamp(1rem, 1.1vw, 1.12rem)",
+    "rules": [
+      "Use Fraunces for H1, major section titles, pull statements, and large factual numerals.",
+      "Use Instrument Sans for body, navigation, CTAs, labels, tabs, and utility text.",
+      "Keep the desktop hero headline near 2-3 lines with a wide text container.",
+      "Do not use Arial, Helvetica, raw system-ui, or browser defaults as the visual identity.",
+      "Use clamp() for display type and spacing; do not scale fonts directly with viewport width."
+    ]
+  },
+  "customFonts": {
+    "provider": "next/font/google",
+    "layoutFile": "app/layout.tsx",
+    "imports": [
+      "Fraunces",
+      "Instrument_Sans"
+    ],
+    "cssVariables": [
+      "--font-display",
+      "--font-body"
+    ],
+    "fallbackPolicy": "Use safe fallback families only after the custom font variables; the intended identity must come from next/font."
+  },
+  "assetPlan": {
+    "photos": "No supplied photos. Do not add stock imagery.",
+    "logo": "No supplied logo. Create a simple text lockup or monogram in markup/CSS only.",
+    "visualSystem": [
+      "Hero thermal map panel with CSS building grid, airflow curves, measurement ticks, and warm/cool split.",
+      "Manhattan grid-inspired proof panel built with CSS lines, not an external map.",
+      "Duct/vent linework dividers and small temperature chips.",
+      "High-contrast final CTA with graphite, copper, and cool line accents."
+    ],
+    "futurePhotoRule": "If business.photos or business.heroImage is later supplied, use those real assets in controlled photo ribbons or panel crops and keep object-fit cover."
+  },
+  "sections": [
+    {
+      "id": "top",
+      "component": "SiteHeader",
+      "purpose": "Premium sticky navigation with brand lockup, anchor links, and call CTA.",
+      "content": "Brand name, Manhattan HVAC context, anchors to Approach, Services, Proof, Process, Contact, and Call now button.",
+      "rhythm": "compact navigation"
+    },
+    {
+      "id": "hero",
+      "component": "Hero",
+      "purpose": "Art-directed first viewport that makes the page specific to Manhattan HVAC.",
+      "content": "Large editorial headline, short deck, call CTA, website CTA, right-side thermal contact panel with phone, service area, rating, and review count.",
+      "rhythm": "oversized editorial split hero"
+    },
+    {
+      "id": "proof-strip",
+      "component": "CredibilityStrip",
+      "purpose": "Quick factual confidence without fake badges.",
+      "content": "Manhattan HVAC, 4.9 rating, 42 Google reviews, Broadway listing from notes.",
+      "rhythm": "ticker-like proof rail"
+    },
+    {
+      "id": "approach",
+      "component": "BrandThesis",
+      "purpose": "Explain the practical, room-first approach without generic about-us copy.",
+      "content": "Editorial two-column section about describing the room, system, symptoms, building access, and caller priorities.",
+      "rhythm": "two-column belief section"
+    },
+    {
+      "id": "services",
+      "component": "ServiceArchitecture",
+      "purpose": "Present broad HVAC help areas without pretending a supplied service catalog exists.",
+      "content": "Selector panels for Cooling concerns, Heating concerns, Comfort diagnostics, and Manhattan property coordination.",
+      "rhythm": "service architecture tabs"
+    },
+    {
+      "id": "decision-guide",
+      "component": "DecisionGuide",
+      "purpose": "Help comparison shoppers know when and how to call.",
+      "content": "Asymmetric bento: symptoms to mention, building details to know, website verification, and unsupported-claim transparency.",
+      "rhythm": "gapless asymmetric bento"
+    },
+    {
+      "id": "local-proof",
+      "component": "LocalProofPanel",
+      "purpose": "Use supplied proof and location context as a designed module.",
+      "content": "4.9 rating, 42 Google reviews, Manhattan service area, Broadway listing from notes, website link.",
+      "rhythm": "local proof/contact panel"
+    },
+    {
+      "id": "process",
+      "component": "ProcessStory",
+      "purpose": "Show a conservative contact-to-next-step flow.",
+      "content": "Call with issue and location; describe system, symptoms, and access; discuss next appropriate service step.",
+      "rhythm": "sticky narrative plus timeline"
+    },
+    {
+      "id": "expectations",
+      "component": "ExpectationsMatrix",
+      "purpose": "Turn limited data into transparent decision support rather than fake claims.",
+      "content": "Clear contact paths, factual proof only, Manhattan-specific call prep, no unsupported promises.",
+      "rhythm": "expectations grid"
+    },
+    {
+      "id": "questions",
+      "component": "QuestionsAccordion",
+      "purpose": "Provide a useful accessible interaction.",
+      "content": "Derived FAQs about what to mention when calling, whether email is listed, website use, and service area.",
+      "rhythm": "accordion disclosure"
+    },
+    {
+      "id": "contact",
+      "component": "FinalContactCta",
+      "purpose": "High-contrast final phone-first conversion panel.",
+      "content": "Call (929) 298-9750, visit rileys-hvac.com, Manhattan context, rating/review proof.",
+      "rhythm": "high-contrast CTA"
+    },
+    {
+      "id": "footer",
+      "component": "Footer",
+      "purpose": "Close with navigation, contact paths, and data transparency.",
+      "content": "Business name, phone, website, anchors, service area, note that page uses supplied business data.",
+      "rhythm": "compact editorial footer"
+    }
+  ],
+  "components": [
+    "phoneHref helper",
+    "websiteHref helper",
+    "normalizeCity helper",
+    "extractNotesFacts helper",
+    "SiteHeader",
+    "ThermalMapPanel",
+    "Hero",
+    "CredibilityStrip",
+    "BrandThesis",
+    "ServiceArchitecture",
+    "DecisionGuide",
+    "LocalProofPanel",
+    "ProcessStory",
+    "ExpectationsMatrix",
+    "QuestionsAccordion",
+    "FinalContactCta",
+    "Footer",
+    "MobileCallBar"
+  ],
+  "interactions": {
+    "anchors": "Header links scroll to sections and use focus-visible states.",
+    "serviceSelector": "Use accessible CSS radio tabs or minimal client-state buttons if necessary; default to Cooling concerns.",
+    "accordion": "Use native details/summary for FAQ disclosures.",
+    "mobileStickyCta": "Fixed bottom call bar on small viewports when phone exists.",
+    "hoverFocus": "Buttons and panels receive subtle color, border, and transform changes; no distracting animation.",
+    "reducedMotion": "Disable transitions and smooth scrolling under prefers-reduced-motion: reduce."
+  },
+  "ctaMap": {
+    "headerPrimary": {
+      "label": "Call now",
+      "href": "tel:+19292989750"
+    },
+    "heroPrimary": {
+      "label": "Call Riley's A/C and Heat",
+      "href": "tel:+19292989750"
+    },
+    "heroSecondary": {
+      "label": "Visit website",
+      "href": "https://rileys-hvac.com/"
+    },
+    "servicePanel": {
+      "label": "Talk through the issue",
+      "href": "tel:+19292989750"
+    },
+    "decisionGuide": {
+      "label": "Have these details ready, then call",
+      "href": "tel:+19292989750"
+    },
+    "proofPanel": {
+      "label": "Open website",
+      "href": "https://rileys-hvac.com/"
+    },
+    "finalPrimary": {
+      "label": "Call (929) 298-9750",
+      "href": "tel:+19292989750"
+    },
+    "finalSecondary": {
+      "label": "Visit rileys-hvac.com",
+      "href": "https://rileys-hvac.com/"
+    },
+    "mobileSticky": {
+      "label": "Call now",
+      "href": "tel:+19292989750"
+    },
+    "excluded": "No email CTA because no email is supplied."
+  },
+  "mobilePlan": {
+    "layout": [
+      "Single-column sections with redesigned spacing, not squeezed desktop grids.",
+      "Hero headline remains readable in 3-5 mobile lines with clamp() and max-width controls.",
+      "Thermal map panel moves below hero text with stable aspect ratio.",
+      "Credibility strip wraps into two rows or horizontal scroller with no clipped text.",
+      "Service tabs stack into full-width segmented controls.",
+      "Bento and proof grids collapse to one column.",
+      "Sticky process layout becomes standard timeline.",
+      "Final CTA includes bottom padding so the sticky call bar does not cover content."
+    ],
+    "technical": [
+      "Set overflow-x: hidden on html/body/page shell.",
+      "Use minmax(0, 1fr) in grids to avoid overflow.",
+      "Use focus-visible states large enough for touch navigation.",
+      "Use a bottom safe-area inset for mobile sticky CTA."
+    ]
+  },
+  "stagePlan": [
+    {
+      "stage": "Foundation",
+      "tasks": [
+        "Update app/layout.tsx with metadata and next/font/google variables.",
+        "Create CSS tokens, reset, typography, layout primitives, focus states, and reduced-motion rules."
+      ]
+    },
+    {
+      "stage": "Full composition",
+      "tasks": [
+        "Rewrite app/page.tsx from a blank canvas using the planned component order.",
+        "Build all sections with factual data and CSS-art visual assets."
+      ]
+    },
+    {
+      "stage": "Interactions",
+      "tasks": [
+        "Implement service selector, native FAQ details, anchor navigation, and mobile sticky call bar.",
+        "Keep all interactions accessible and static-build safe."
+      ]
+    },
+    {
+      "stage": "Visual polish",
+      "tasks": [
+        "Check hierarchy, section rhythm, button contrast, and mobile collapse.",
+        "Remove generic copy, repeated-card dominance, placeholder labels, and unsupported claims."
+      ]
+    },
+    {
+      "stage": "Validation",
+      "tasks": [
+        "Run npm run build.",
+        "Inspect desktop and mobile if browser tooling is available.",
+        "Check no stock assets, no fake claims, no missing phone CTA, and no horizontal overflow."
+      ]
+    }
+  ],
+  "qaChecklist": [
+    "At least 9 meaningful sections plus footer are present.",
+    "Custom fonts are loaded through next/font/google.",
+    "Hero is art-directed and specific to Manhattan HVAC.",
+    "Phone and website CTAs use real href values.",
+    "No email CTA appears.",
+    "No stock images or external hotlinked images are used.",
+    "No fake licenses, warranties, emergency availability, same-day service, guarantees, testimonials, or years in business are claimed.",
+    "Rating and review count are only shown as supplied notes facts.",
+    "Service language remains broad and HVAC-grounded because services array is empty.",
+    "Navigation anchors work and focus states are visible.",
+    "Mobile sticky call bar works and does not obscure content.",
+    "No horizontal overflow on common mobile widths.",
+    "Reduced-motion preference is respected.",
+    "Final CTA and footer are complete.",
+    "The page could not pass as a generic local-business template by only changing the business name."
+  ]
+}
